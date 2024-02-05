@@ -3,7 +3,7 @@ import 'package:first_browse_screen/utils/images/app_images.dart';
 import 'package:first_browse_screen/utils/size/size_utils.dart';
 import 'package:first_browse_screen/utils/styles/app_text_style.dart';
 import 'package:first_browse_screen/widgets/bottom_container.dart';
-import 'package:first_browse_screen/widgets/get_diamond_container.dart';
+import 'package:first_browse_screen/widgets/diamond_row.dart';
 import 'package:first_browse_screen/widgets/global_container.dart';
 import 'package:first_browse_screen/widgets/pancake_row.dart';
 import 'package:first_browse_screen/widgets/single_row.dart';
@@ -12,6 +12,7 @@ import 'package:first_browse_screen/widgets/view_all_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 
 class BrowseScreen extends StatefulWidget {
   const BrowseScreen({super.key});
@@ -36,43 +37,39 @@ class _BrowseScreenState extends State<BrowseScreen> {
         backgroundColor: const Color(0xFFF2F3F8),
         appBar: AppBar(
           backgroundColor: const Color(0xFF4C95FF),
-          title: Column(
-            children: [
-              Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.getW()),
-                child: Row(
-                  children: [
-                    SvgPicture.asset(
-                      AppImages.location,
-                      width: 16.getW(),
-                      height: 16.getH(),
-                    ),
-                    SizedBox(
-                      width: 4.getW(),
-                    ),
-                    Text(
-                      "1 Pat Tat St, San Po Kong",
-                      style: AppTextStyle.interBold.copyWith(
-                          color: AppColors.white,
-                          fontSize: 14.getH(),
-                          fontWeight: FontWeight.w700),
-                    ),
-                    SizedBox(
-                      width: 4.getW(),
-                    ),
-                    SvgPicture.asset(AppImages.arrowBottom),
-                    SizedBox(
-                      width: 80.getW(),
-                    ),
-                    SvgPicture.asset(AppImages.scaner),
-                    SizedBox(
-                      width: 15.getW(),
-                    ),
-                    SvgPicture.asset(AppImages.search),
-                  ],
+          title: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16.getW()),
+            child: Row(
+              children: [
+                SvgPicture.asset(
+                  AppImages.location,
+                  width: 16.getW(),
+                  height: 16.getH(),
                 ),
-              ),
-            ],
+                SizedBox(
+                  width: 4.getW(),
+                ),
+                Text(
+                  "1 Pat Tat St, San Po Kong",
+                  style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.white,
+                      fontSize: 14.getH(),
+                      fontWeight: FontWeight.w700),
+                ),
+                SizedBox(
+                  width: 4.getW(),
+                ),
+                ZoomTapAnimation(child: SvgPicture.asset(AppImages.arrowBottom)),
+                SizedBox(
+                  width: 80.getW(),
+                ),
+                ZoomTapAnimation(child: SvgPicture.asset(AppImages.scaner)),
+                SizedBox(
+                  width: 15.getW(),
+                ),
+                ZoomTapAnimation(child: SvgPicture.asset(AppImages.search)),
+              ],
+            ),
           ),
           elevation: 0,
         ),
@@ -101,23 +98,9 @@ class _BrowseScreenState extends State<BrowseScreen> {
                   const ViewAllItem(),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.getW()),
-                    child: SingleChildScrollView(
+                    child: const SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
-                      child: Row(
-                        children: [
-                          const GetDiamondContainer(),
-                          SizedBox(width: 10.getW(),),
-                          const GetDiamondContainer(),
-                          SizedBox(width: 10.getW(),),
-                          const GetDiamondContainer(),
-                          SizedBox(width: 10.getW(),),
-                          const GetDiamondContainer(),
-                          SizedBox(width: 10.getW(),),
-                          const GetDiamondContainer(),
-                          SizedBox(width: 10.getW(),),
-                          const GetDiamondContainer(),
-                        ],
-                      ),
+                      child: DiamondRow(),
                     ),
                   ),
                   SizedBox(height: 16.getH(),),
@@ -155,15 +138,18 @@ class _BrowseScreenState extends State<BrowseScreen> {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        const SizedBox(width: 0,),
-                        Text("Map", style: AppTextStyle.interBold.copyWith(
-                          color: AppColors.black
-                        ),),
+                        ZoomTapAnimation(
+                          child: Text("Map", style: AppTextStyle.interBold.copyWith(
+                            color: AppColors.black
+                          ),),
+                        ),
                         SizedBox(width: 10.getW(),),
                         SizedBox(width: 0.getW(),),
-                        Text("Filter", style: AppTextStyle.interBold.copyWith(
-                            color: AppColors.black
-                        ),),
+                        ZoomTapAnimation(
+                          child: Text("Filter", style: AppTextStyle.interBold.copyWith(
+                              color: AppColors.black
+                          ),),
+                        ),
                       ],
                     ),
                   ),
@@ -188,8 +174,3 @@ class _BrowseScreenState extends State<BrowseScreen> {
     );
   }
 }
-
-
-
-
-

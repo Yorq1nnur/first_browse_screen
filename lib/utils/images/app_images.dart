@@ -11,6 +11,7 @@ class AppImages {
 
   //.svg
   static const String arrowBottom = "assets/icons/arrow_bottom.svg";
+  static const String pencil = "assets/icons/pencil.svg";
   static const String arrowFollow = "assets/icons/arrow_follow.svg";
   static const String bike = "assets/icons/bike.svg";
   static const String book = "assets/icons/book.svg";

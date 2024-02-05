@@ -2,6 +2,8 @@
 
 import 'package:first_browse_screen/screens/checkout_screen/checkout_screen.dart';
 import 'package:first_browse_screen/screens/items/text_button.dart';
+import 'package:first_browse_screen/screens/konet_pay_profile_screen/konet_pay_profile_screen.dart';
+import 'package:first_browse_screen/screens/konet_pay_settings_screen/konet_pay_settings_screen.dart';
 import 'package:first_browse_screen/utils/colors/app_colors.dart';
 import 'package:first_browse_screen/utils/size/size_utils.dart';
 import 'package:first_browse_screen/utils/styles/app_text_style.dart';
@@ -68,8 +70,17 @@ class _HelperScreenState extends State<HelperScreen> {
               TextButtonHelperScreen(
                 containerColor: AppColors.green,
                 spreadColor: AppColors.greenAccent,
-                title: "SECOND SCREEN",
-                onTap: () {},
+                title: "KONET PAY PROFILE",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return KonetPayProfileScreen();
+                      },
+                    ),
+                  );
+                },
               ),
               SizedBox(
                 height: 25.getH(),
@@ -77,8 +88,17 @@ class _HelperScreenState extends State<HelperScreen> {
               TextButtonHelperScreen(
                 containerColor: AppColors.red,
                 spreadColor: AppColors.redAccent,
-                title: "THIRD SCREEN",
-                onTap: () {},
+                title: "KONETPAY SETTINGS",
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return KonetPaySettingsScreen();
+                      },
+                    ),
+                  );
+                },
               ),
             ],
           ),

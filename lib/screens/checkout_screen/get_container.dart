@@ -13,48 +13,95 @@ class GetContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 93.getH(),
-      width: 321.getW(),
-      decoration: BoxDecoration(
-        color: AppColors.white,
-        borderRadius: BorderRadius.circular(6),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.c_090F47.withOpacity(0.1),
-            spreadRadius: 1,
+    return Column(
+      children: [
+        Container(
+          height: 93.getH(),
+          width: 321.getW(),
+          decoration: BoxDecoration(
+            color: AppColors.white,
+            borderRadius: BorderRadius.circular(6),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.c_090F47.withOpacity(0.1),
+                spreadRadius: 1,
+              ),
+            ],
           ),
-        ],
-      ),
-      child: Padding(
-        padding: EdgeInsets.only(left: 16.getW(), right: 20.getW()),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            Column(
+          child: Padding(
+            padding: EdgeInsets.only(left: 16.getW(), right: 20.getW()),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Text(title, style: AppTextStyle.interBold.copyWith(
-                  color: AppColors.c_090F47,
-                  fontWeight: FontWeight.w600,
-                  fontSize: 14.getH(),
-                ),),
-                Text("(205) 555-024", style: AppTextStyle.interBold.copyWith(
-                  color: AppColors.c_090F47.withOpacity(0.45),
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.getH(),
-                ),),
-                Text(address, style: AppTextStyle.interBold.copyWith(
-                  color: AppColors.c_090F47.withOpacity(0.45),
-                  fontWeight: FontWeight.w400,
-                  fontSize: 13.getH(),
-                ),),
+                Column(
+                  children: [
+                    Text("title", style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.c_090F47,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.getH(),
+                    ),),
+                    Text("(205) 555-024", style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.c_090F47.withOpacity(0.45),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 13.getH(),
+                    ),),
+                    Text("address", style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.c_090F47.withOpacity(0.45),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 13.getH(),
+                    ),),
+                  ],
+                ),
+                const Spacer(),
+                IconButton(onPressed: (){}, icon: SvgPicture.asset(AppImages.pencil))
               ],
             ),
-            const Spacer(),
-            IconButton(onPressed: (){}, icon: SvgPicture.asset(AppImages.pencil))
-          ],
+          ),
         ),
-      ),
+        Container(
+          height: 93.getH(),
+          width: 321.getW(),
+          decoration: BoxDecoration(
+            color: AppColors.white,
+            borderRadius: BorderRadius.circular(6),
+            boxShadow: [
+              BoxShadow(
+                color: AppColors.c_090F47.withOpacity(0.1),
+                spreadRadius: 1,
+              ),
+            ],
+          ),
+          child: Padding(
+            padding: EdgeInsets.only(left: 16.getW(), right: 20.getW()),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Column(
+                  children: [
+                    Text("title", style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.c_090F47,
+                      fontWeight: FontWeight.w600,
+                      fontSize: 14.getH(),
+                    ),),
+                    Text("(205) 555-024", style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.c_090F47.withOpacity(0.45),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 13.getH(),
+                    ),),
+                    Text("address", style: AppTextStyle.interBold.copyWith(
+                      color: AppColors.c_090F47.withOpacity(0.45),
+                      fontWeight: FontWeight.w400,
+                      fontSize: 13.getH(),
+                    ),),
+                  ],
+                ),
+                const Spacer(),
+                IconButton(onPressed: (){}, icon: SvgPicture.asset(AppImages.pencil))
+              ],
+            ),
+          ),
+        ),
+      ],
     );
   }
 }

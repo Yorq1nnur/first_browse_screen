@@ -59,7 +59,8 @@ class _BrowseScreenState extends State<BrowseScreen> {
                 SizedBox(
                   width: 4.getW(),
                 ),
-                ZoomTapAnimation(child: SvgPicture.asset(AppImages.arrowBottom)),
+                ZoomTapAnimation(
+                    child: SvgPicture.asset(AppImages.arrowBottom)),
                 SizedBox(
                   width: 80.getW(),
                 ),
@@ -91,10 +92,10 @@ class _BrowseScreenState extends State<BrowseScreen> {
                     height: 8.getH(),
                   ),
                   const SingleChildScrollView(
-                      scrollDirection: Axis.horizontal,
-                      child: PanCakeRow()
+                      scrollDirection: Axis.horizontal, child: PanCakeRow()),
+                  SizedBox(
+                    height: 16.getH(),
                   ),
-                  SizedBox(height: 16.getH(),),
                   const ViewAllItem(),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.getW()),
@@ -103,7 +104,9 @@ class _BrowseScreenState extends State<BrowseScreen> {
                       child: DiamondRow(),
                     ),
                   ),
-                  SizedBox(height: 16.getH(),),
+                  SizedBox(
+                    height: 16.getH(),
+                  ),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 16.getW()),
                     child: const SingleChildScrollView(
@@ -111,63 +114,70 @@ class _BrowseScreenState extends State<BrowseScreen> {
                       child: SushiManRow(),
                     ),
                   ),
-
                 ],
               ),
             ),
-            Positioned(child: Column(
-              children: [
-                const GlobalContainer(),
-                SizedBox(
-                  height: 16.getH(),
-                ),
-              ],
-            ),),
             Positioned(
-                left: 128.getW(),
-                bottom: 92.getH(),
-                child: Container(
-              height: 40,
-              width: 120,
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius: BorderRadius.circular(20)
-              ),
-                  child: Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 10.getW()),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        ZoomTapAnimation(
-                          child: Text("Map", style: AppTextStyle.interBold.copyWith(
-                            color: AppColors.black
-                          ),),
-                        ),
-                        SizedBox(width: 10.getW(),),
-                        SizedBox(width: 0.getW(),),
-                        ZoomTapAnimation(
-                          child: Text("Filter", style: AppTextStyle.interBold.copyWith(
-                              color: AppColors.black
-                          ),),
-                        ),
-                      ],
-                    ),
+              child: Column(
+                children: [
+                  const GlobalContainer(),
+                  SizedBox(
+                    height: 16.getH(),
                   ),
-            ),),
-          Positioned(
-            left: 190.getW(),
-            bottom: 85.getW(),
-            child: Container(
-            width: 1.getW(),
-            height: 16.getH(),
-            decoration: BoxDecoration(
-              color: const Color(0xFF999999).withOpacity(0.2),
+                ],
+              ),
             ),
-          ),
-          ),
-            const Positioned(
-              bottom: 0,
-              child: BottomContainer())
+            Positioned(
+              left: 128.getW(),
+              bottom: 92.getH(),
+              child: Container(
+                height: 40,
+                width: 120,
+                decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(20)),
+                child: Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 10.getW()),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      ZoomTapAnimation(
+                        child: Text(
+                          "Map",
+                          style: AppTextStyle.interBold
+                              .copyWith(color: AppColors.black),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 10.getW(),
+                      ),
+                      SizedBox(
+                        width: 0.getW(),
+                      ),
+                      ZoomTapAnimation(
+                        child: Text(
+                          "Filter",
+                          style: AppTextStyle.interBold
+                              .copyWith(color: AppColors.black),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+            Positioned(
+              left: 190.getW(),
+              bottom: 85.getW(),
+              child: Container(
+                width: 1.getW(),
+                height: 16.getH(),
+                decoration: BoxDecoration(
+                  color: const Color(0xFF999999).withOpacity(0.2),
+                ),
+              ),
+            ),
+            const Positioned(bottom: 0, child: BottomContainer())
           ],
         ),
       ),

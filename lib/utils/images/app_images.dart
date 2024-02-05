@@ -8,9 +8,15 @@ class AppImages {
   static const String recommendations = "assets/images/recommendations.png";
   static const String sushi = "assets/images/sushi.png";
   static const String sushiMan = "assets/images/sushi_man.png";
+  static const String creditCard = "assets/images/credit_card.png";
+  static const String payPal = "assets/images/pay_pal.png";
+  static const String googlePlay = "assets/images/google_play.png";
+  static const String applePay = "assets/images/apple_pay.png";
 
   //.svg
   static const String arrowBottom = "assets/icons/arrow_bottom.svg";
+  static const String plus = "assets/icons/plus.svg";
+  static const String pencil = "assets/icons/pencil.svg";
   static const String arrowFollow = "assets/icons/arrow_follow.svg";
   static const String bike = "assets/icons/bike.svg";
   static const String book = "assets/icons/book.svg";

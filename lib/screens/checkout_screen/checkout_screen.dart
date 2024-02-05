@@ -1,5 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
+import 'package:first_browse_screen/screens/checkout_screen/delivery_radio.dart';
 import 'package:first_browse_screen/screens/checkout_screen/get_top_items.dart';
 import 'package:first_browse_screen/screens/checkout_screen/payment_methods.dart';
 import 'package:first_browse_screen/utils/colors/app_colors.dart';
@@ -19,38 +18,6 @@ class CheckOutScreen extends StatefulWidget {
 }
 
 class _CheckOutScreenState extends State<CheckOutScreen> {
-  late DeliveryAddress? _character;
-
-  @override
-  void initState() {
-    _character = address[0];
-    super.initState();
-  }
-
-  final List<DeliveryAddress> address = [
-    DeliveryAddress(
-      text: "Home",
-      subTitle: Text(
-        "(205) 555-024\n1786 Wheeler Bridge",
-        style: AppTextStyle.interBold.copyWith(
-          color: AppColors.c_090F47.withOpacity(0.45),
-          fontWeight: FontWeight.w400,
-          fontSize: 13.getH(),
-        ),
-      ),
-    ),
-    DeliveryAddress(
-      text: "Office",
-      subTitle: Text(
-        "(205) 555-024\n1786 w Dallas St under field",
-        style: AppTextStyle.interBold.copyWith(
-          color: AppColors.c_090F47.withOpacity(0.45),
-          fontWeight: FontWeight.w400,
-          fontSize: 13.getH(),
-        ),
-      ),
-    ),
-  ];
 
   @override
   Widget build(BuildContext context) {
@@ -76,7 +43,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               onTap: () {
                 Navigator.pop(context);
               },
-              child: Icon(Icons.arrow_back),
+              child: const Icon(Icons.arrow_back),
             ),
           ),
         ),
@@ -91,60 +58,8 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              GetTopItems(),
-              ...List.generate(
-                address.length,
-                (index) => Column(
-                  children: [
-                    SizedBox(height: 8.getH(),),
-                    Container(
-                      decoration: BoxDecoration(
-                          color: AppColors.white,
-                          borderRadius: BorderRadius.circular(6),
-                          boxShadow: [
-                            BoxShadow(
-                                color: AppColors.black, //.withOpacity(0.1)
-                                spreadRadius: 1)
-                          ]),
-                      child: ListTile(
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(6),
-                        ),
-                        trailing: Padding(
-                          padding: EdgeInsets.only(bottom: 7.getH()),
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: [
-                              IconButton(
-                                style: IconButton.styleFrom(
-                                    padding: EdgeInsets.zero),
-                                onPressed: () {},
-                                icon: SvgPicture.asset(AppImages.pencil),
-                              ),
-                            ],
-                          ),
-                        ),
-                        titleTextStyle: AppTextStyle.interBold.copyWith(
-                            color: AppColors.c_090F47,
-                            fontWeight: FontWeight.w600,
-                            fontSize: 14.getH()),
-                        title: Text(address[index].text),
-                        subtitle: address[index].subTitle,
-                        leading: Radio<DeliveryAddress>(
-                            activeColor: AppColors.c_4157FF,
-                            value: address[index],
-                            groupValue: _character,
-                            onChanged: (DeliveryAddress? value) {
-                              setState(() {
-                                _character = value;
-                              });
-                            }),
-                      ),
-                    ),
-
-                  ],
-                ),
-              ),
+              const GetTopItems(),
+              const DeliveryRadioWidget(),
               SizedBox(
                 height: 0.getH(),
               ),
@@ -192,7 +107,7 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
               SizedBox(
                 height: 12.getH(),
               ),
-              PaymentMethods(),
+              const PaymentMethods(),
               SizedBox(
                 height: 20.getH(),
               ),
@@ -226,11 +141,4 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
       ),
     );
   }
-}
-
-class DeliveryAddress {
-  final String text;
-  final Text subTitle;
-
-  DeliveryAddress({required this.text, required this.subTitle});
 }

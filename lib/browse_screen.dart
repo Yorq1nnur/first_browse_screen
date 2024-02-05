@@ -1,3 +1,7 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:zoom_tap_animation/zoom_tap_animation.dart';
 import 'package:first_browse_screen/utils/colors/app_colors.dart';
 import 'package:first_browse_screen/utils/images/app_images.dart';
 import 'package:first_browse_screen/utils/size/size_utils.dart';
@@ -9,10 +13,7 @@ import 'package:first_browse_screen/widgets/pancake_row.dart';
 import 'package:first_browse_screen/widgets/single_row.dart';
 import 'package:first_browse_screen/widgets/sushi_man_row.dart';
 import 'package:first_browse_screen/widgets/view_all_item.dart';
-import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:zoom_tap_animation/zoom_tap_animation.dart';
+
 
 class BrowseScreen extends StatefulWidget {
   const BrowseScreen({super.key});

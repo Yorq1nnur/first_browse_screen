@@ -60,39 +60,33 @@ class _CheckOutScreenState extends State<CheckOutScreen> {
             children: [
               const GetTopItems(),
               const DeliveryRadioWidget(),
-              SizedBox(
-                height: 0.getH(),
-              ),
-              Padding(
-                padding: EdgeInsets.only(right: 6.getW()),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    TextButton(
-                      onPressed: () {},
-                      style: TextButton.styleFrom(padding: EdgeInsets.zero),
-                      child: SizedBox(
-                        width: 111,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.start,
-                          children: [
-                            SvgPicture.asset(AppImages.plus),
-                            SizedBox(
-                              width: 8.getW(),
-                            ),
-                            Text(
-                              "Add Address",
-                              style: AppTextStyle.interBold.copyWith(
-                                  color: AppColors.c_4157FF,
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w400),
-                            ),
-                          ],
-                        ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  TextButton(
+                    onPressed: () {},
+                    style: TextButton.styleFrom(padding: EdgeInsets.zero),
+                    child: SizedBox(
+                      width: 111,
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: [
+                          SvgPicture.asset(AppImages.plus),
+                          SizedBox(
+                            width: 6.getW(),
+                          ),
+                          Text(
+                            "Add Address",
+                            style: AppTextStyle.interBold.copyWith(
+                                color: AppColors.c_4157FF,
+                                fontSize: 14,
+                                fontWeight: FontWeight.w400),
+                          ),
+                        ],
                       ),
                     ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 11.getH(),

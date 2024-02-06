@@ -16,6 +16,20 @@ class AppImages {
   //.svg
   static const String arrowBottom = "assets/icons/arrow_bottom.svg";
   static const String plus = "assets/icons/plus.svg";
+  static const String bottomScaner = "assets/icons/bottom_scaner.svg";
+  static const String bottomSettings = "assets/icons/bottom_settings.svg";
+  static const String bottomHome = "assets/icons/bottom_home.svg";
+  static const String bottomChange = "assets/icons/bottom_change.svg";
+  static const String alarm = "assets/icons/alarm.svg";
+  static const String arrowTr = "assets/icons/arrow_tr.svg";
+  static const String transactionsPin = "assets/icons/transactions_pin.svg";
+  static const String arrowBack = "assets/icons/arrow_back.svg";
+  static const String handleScaner = "assets/icons/hand_scaner.svg";
+  static const String person = "assets/icons/person.svg";
+  static const String support = "assets/icons/support.svg";
+  static const String unselectedArrowFollow = "assets/icons/unselected_arrow_follow.svg";
+  static const String stats = "assets/icons/stats.svg";
+  static const String arrowFollowIos = "assets/icons/arrow_follow_ios.svg";
   static const String pencil = "assets/icons/pencil.svg";
   static const String arrowFollow = "assets/icons/arrow_follow.svg";
   static const String bike = "assets/icons/bike.svg";

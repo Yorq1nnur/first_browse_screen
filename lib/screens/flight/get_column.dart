@@ -26,12 +26,7 @@ class _GetColumnState extends State<GetColumn> {
               width: 140.w,
               child: TextField(
                 decoration: InputDecoration(
-                  prefixIcon: Row(
-                    children: [
-                      SizedBox(width: 3.w,),
-                      SvgPicture.asset(AppImages.date),
-                    ],
-                  ),
+                  prefixIcon: SvgPicture.asset(AppImages.date),
                   prefixIconConstraints: BoxConstraints(maxHeight: 20.h, maxWidth: 20.h,),
                   border: OutlineInputBorder(
                     borderRadius: BorderRadius.circular(8),

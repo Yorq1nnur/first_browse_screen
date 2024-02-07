@@ -1,5 +1,6 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:first_browse_screen/screens/flight/bottom_container.dart';
 import 'package:first_browse_screen/screens/flight/get_chennai.dart';
 import 'package:first_browse_screen/screens/flight/get_column.dart';
 import 'package:first_browse_screen/screens/flight/get_container.dart';
@@ -187,49 +188,7 @@ class _FlightMainScreenState extends State<FlightMainScreen> {
                   ),
                 ),
                 GetScrollRow(),
-                Container(
-                  width: double.infinity,
-                  padding: EdgeInsets.only(
-                    left: 16.w,
-                    right: 16.w,
-                    top: 14.h,
-                    bottom: 8.h,
-                  ),
-                  margin: EdgeInsets.only(
-                    top: 40.h,
-                  ),
-                  decoration: BoxDecoration(
-                    color: AppColors.c_0085FF,
-                    borderRadius: BorderRadius.only(
-                      bottomRight: Radius.circular(8),
-                      bottomLeft: Radius.circular(8),
-                    ),
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Center(
-                            child: SvgPicture.asset(
-                              AppImages.flightBottomHome,
-                              height: 24.h,
-                              width: 24.w,
-                            ),
-                          ),
-                          Text(
-                            "Home",
-                            style: AppTextStyle.interRegular.copyWith(
-                                color: AppColors.white,
-                                fontSize: 12.sp,
-                                fontWeight: FontWeight.w600),
-                          )
-                        ],
-                      )
-                    ],
-                  ),
-                )
+                BottomContainer()
               ],
             ),
           ),

@@ -18,12 +18,12 @@ class AppImages {
   //.svg
   static const String arrowBottom = "assets/icons/arrow_bottom.svg";
   static const String plus = "assets/icons/plus.svg";
-  static const String flightBottomBooking = "assets/icons/flight_bottom_booking.svg.svg";
-  static const String flightBottomHome = "assets/icons/flight_bottom_home.svg.svg";
-  static const String flightBottomInbox = "assets/icons/flight_bottom_inbox.svg.svg";
-  static const String flightBottomOffer = "assets/icons/flight_bottom_offer.svg.svg";
-  static const String flightBottomProfile = "assets/icons/flight_bottom_profile.svg.svg";
   static const String date = "assets/icons/date.svg";
+  static const String first = "assets/icons/first.svg";
+  static const String second = "assets/icons/second.svg";
+  static const String third = "assets/icons/second.svg";
+  static const String five = "assets/icons/five.svg";
+  static const String six = "assets/icons/six.svg";
   static const String fieldFirstIcon = "assets/icons/field_first_icon.svg";
   static const String fieldSecondIcon = "assets/icons/field_second_icon.svg";
   static const String flightAlarm = "assets/icons/flight_alarm.svg";

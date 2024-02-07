@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:first_browse_screen/screens/flight/bottom_container.dart';
 import 'package:first_browse_screen/screens/flight/get_chennai.dart';
 import 'package:first_browse_screen/screens/flight/get_column.dart';
@@ -110,7 +108,7 @@ class _FlightMainScreenState extends State<FlightMainScreen> {
                       ),
                     ],
                   ),
-                  child: GetSelectionRow(),
+                  child: const GetSelectionRow(),
                 ),
                 Container(
                   margin: EdgeInsets.only(
@@ -127,7 +125,7 @@ class _FlightMainScreenState extends State<FlightMainScreen> {
                   decoration: BoxDecoration(
                     color: AppColors.white,
                     borderRadius: BorderRadius.circular(16),
-                    boxShadow: [
+                    boxShadow: const [
                       BoxShadow(
                         color: AppColors.c_000000,
                         blurRadius: 4,
@@ -140,22 +138,22 @@ class _FlightMainScreenState extends State<FlightMainScreen> {
                       SizedBox(
                         height: 12.h,
                       ),
-                      GetChennai(),
+                      const GetChennai(),
                       SizedBox(
                         height: 20.h,
                       ),
-                      GetColumn(),
+                      const GetColumn(),
                       SizedBox(
                         height: 25.h,
                       ),
-                      GetContainer(),
+                      const GetContainer(),
                     ],
                   ),
                 ),
                 SizedBox(
                   height: 23.h,
                 ),
-                GetSecondContainer(),
+                const GetSecondContainer(),
                 SizedBox(
                   height: 19.h,
                 ),
@@ -187,8 +185,8 @@ class _FlightMainScreenState extends State<FlightMainScreen> {
                     ],
                   ),
                 ),
-                GetScrollRow(),
-                BottomContainer()
+                const GetScrollRow(),
+                const BottomContainer()
               ],
             ),
           ),

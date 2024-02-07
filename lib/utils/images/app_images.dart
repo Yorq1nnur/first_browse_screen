@@ -12,14 +12,26 @@ class AppImages {
   static const String payPal = "assets/images/pay_pal.png";
   static const String googlePlay = "assets/images/google_play.png";
   static const String applePay = "assets/images/apple_pay.png";
+  static const String masterCard = "assets/images/master_card.png";
+  static const String flightPerson = "assets/images/flight_person.png";
 
   //.svg
   static const String arrowBottom = "assets/icons/arrow_bottom.svg";
   static const String plus = "assets/icons/plus.svg";
+  static const String date = "assets/icons/date.svg";
+  static const String first = "assets/icons/first.svg";
+  static const String second = "assets/icons/second.svg";
+  static const String third = "assets/icons/second.svg";
+  static const String five = "assets/icons/five.svg";
+  static const String six = "assets/icons/six.svg";
+  static const String fieldFirstIcon = "assets/icons/field_first_icon.svg";
+  static const String fieldSecondIcon = "assets/icons/field_second_icon.svg";
+  static const String flightAlarm = "assets/icons/flight_alarm.svg";
   static const String bottomScaner = "assets/icons/bottom_scaner.svg";
   static const String bottomSettings = "assets/icons/bottom_settings.svg";
   static const String bottomHome = "assets/icons/bottom_home.svg";
   static const String bottomChange = "assets/icons/bottom_change.svg";
+  static const String simple = "assets/icons/simple.svg";
   static const String alarm = "assets/icons/alarm.svg";
   static const String arrowTr = "assets/icons/arrow_tr.svg";
   static const String transactionsPin = "assets/icons/transactions_pin.svg";

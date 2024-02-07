@@ -15,6 +15,21 @@ class AppColors {
   static const Color transparent = Colors.transparent;
 
   static const Color c_1A72DD = Color(0xFF1A72DD);
+  static const Color c_0085FF = Color(0xFF0085FF);
+  static const Color c_F2EBE1 = Color(0xFFF2EBE1);
+  static const Color c_6FE2F4 = Color(0xFF6FE2F4);
+  static const Color c_009FFF = Color(0x009FFF);
+  static const Color c_E6E8E7 = Color(0xFFE6E8E7);
+  static const Color c_191919 = Color(0xFF191919);
+  static const Color c_999999 = Color(0xFF999999);
+  static const Color c_000000 = Color(0xFF000000);
+  static const Color c_555555 = Color(0xFF555555);
+  static const Color c_88E0F3 = Color(0xFF88E0F3);
+  static const Color c_591B1B = Color(0xFF591B1B);
+  static const Color c_B6DCF3 = Color(0xFFB6DCF3);
+  static const Color c_4229A2 = Color(0xFF4229A2);
+  static const Color c_46B658 = Color(0xFF46B658);
+  static const Color c_3A0CA3 = Color(0xFF3A0CA3);
   static const Color c_979797 = Color(0xFF979797);
   static const Color c_0098DA = Color(0xFF0098DA);
   static const Color c_0093D6 = Color(0xFF0093D6);
@@ -31,4 +46,8 @@ class AppColors {
   static const Color c_2A3256 = Color(0xFF2A3256);
   static const Color c_C4C4C4= Color(0xFFC4C4C4);
   static const Color c_4157FF=Color(0xFF4157FF);
+
+  static const List<Color> flightGradient = [
+    Color(0xFF69E4F4), Color(0xFFB6DCF3), Color(0xFFB6DCF3), Color(0xFF6CE3F4),
+  ];
 }

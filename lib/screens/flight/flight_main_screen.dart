@@ -25,6 +25,7 @@ class FlightMainScreen extends StatefulWidget {
 class _FlightMainScreenState extends State<FlightMainScreen> {
   @override
   Widget build(BuildContext context) {
+
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
 
